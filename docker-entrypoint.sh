@@ -1,3 +1,3 @@
-#!/bin/bash -l 
+#!/bin/sh -l 
 
 echo "bonjour"
