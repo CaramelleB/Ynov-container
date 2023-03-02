@@ -29,7 +29,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: debst/an-image
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/debst/an-image
           tags: |
             type=semver,pattern={{version}}
     
@@ -38,5 +38,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: 'armelleb/${{ steps.meta.outputs.tags }}'
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
