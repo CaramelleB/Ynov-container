@@ -5,11 +5,11 @@
 
 name: Publish Docker image
 
-on: [workflow_dispatch]
-# on:
-#   push:
-#     tags:
-#       - '*.*.*'
+# on: [workflow_dispatch]
+on:
+  push:
+    tags:
+      - 'v1.*.*'
 
 jobs:
   push_to_registry:
